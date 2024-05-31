@@ -153,7 +153,7 @@ def predict():
                             print("This page has a login form with URL redirect to the same domain or a subdomain.")
                         else:
                             print("This page has a login form with URL redirect to a different domain.")
-                            result = "This domain doesn't but this page content has a login form with URL redirect to a different domain (High phish characteristics)."
+                            result = "This domain doesn't show phish characteristics but the page content has a login form with URL redirect to a different domain (High phish characteristics)."
                             prediction = prediction + 50
                 else:
                     print("This page has a login form with no action attribute.")

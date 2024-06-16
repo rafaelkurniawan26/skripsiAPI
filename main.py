@@ -109,17 +109,9 @@ def preprocess(features):
 
 result=None
 
-@app.route("/", methods=["GET"])
+@app.route("/home", methods=["GET"])
 def home():
-    welcome_message = {
-        "message": "Welcome to the ScanIt API!",
-        "description": "This API allows you to predict whether a given URL is likely to be malicious or safe.",
-        "endpoints": {
-            "/predict": "POST method. Send a JSON payload with the key 'url' to get a prediction.",
-            "/feedback": "POST method. Send a JSON payload with keys 'url' and 'feedback' to provide feedback on the prediction."
-        }
-    }
-    return jsonify(welcome_message)
+    return "ScanIt API"
 
 @app.route("/predict", methods=["POST"])
 def predict():
